@@ -5,7 +5,7 @@ public class ReverceStr {
 		// TODO Auto-generated method stub
 		String a = "123456789";
 		System.out.println(reverceMe(a));
-		 
+		System.out.println(reverceMeChar(a)); 
 	}
 	private static String reverceMe(String a){
 		String b="";  
@@ -13,6 +13,14 @@ public class ReverceStr {
 			b = b + a.substring(i,i+1);
 		}
 		return b;
+	}
+	private static String reverceMeChar(String a){
+		int j = a.length()-1;
+		char[] b= new char[j+1];  
+		for (int i = 0; i<=j; i++) {
+			b[i] = a.charAt(j-i);
+		}
+		return String.valueOf(b);
 	}
 	 
 }
